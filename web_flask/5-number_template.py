@@ -34,7 +34,7 @@ def diplay_python(text="is cool"):
 @app.route('/number/<int:n>')
 def print_number(n):
     """ number route """
-    return '{:d} is a number'.format(n)
+    return '{} is a number'.format(n)
 
 
 @app.route('/number_template/<int:n>')
@@ -44,5 +44,4 @@ def print_template(n):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
     app.run(host='0.0.0.0', port=5000)
