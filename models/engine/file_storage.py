@@ -1,15 +1,15 @@
-#!/usr/bin/python3
-"""This module defines a class to manage file storage for hbnb clone"""
+#!/usr/bin/python3i
+"""defines a class to manage file storage for hbnb clone"""
 import json
 
 
 class FileStorage:
-    """This class manages storage of hbnb models in JSON format"""
+    """class to manage storage of hbnb models in JSON format"""
     __file_path = 'file.json'
     __objects = {}
 
     def all(self, cls=None):
-        """Returns a dictionary of models currently in storage"""
+        """outputs a dictionary of models currently in storage"""
         if cls is None:
             return self.__objects
         cls_name = cls.__name__
@@ -69,5 +69,5 @@ class FileStorage:
             del self.__objects[obj_key]
 
     def close(self):
-        """Call the reload method"""
+        """function to  call the reload method"""
         self.reload()
