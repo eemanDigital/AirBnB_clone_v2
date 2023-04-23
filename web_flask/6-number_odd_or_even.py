@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This script starts a flask web application"""
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
